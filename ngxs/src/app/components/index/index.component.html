@@ -1,0 +1,16 @@
+<div *ngIf="users">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Manager Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | async">
+        <td>{{ user.name }}</td>
+        <td>{{ user.managerId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
